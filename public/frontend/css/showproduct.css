@@ -1,0 +1,294 @@
+img{
+  height:auto;
+  max-width:100%;
+}
+.slider {
+  padding: 32px;
+  color: #fff;
+}
+.slider .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.slider__flex {
+  display: flex;
+  align-items: flex-start;
+}
+.slider__col {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin-right: 32px;
+}
+.slider__prev,
+.slider__next {
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color:#000;
+}
+.slider__prev:focus,
+.slider__next:focus {
+  outline: none;
+}
+.slider__thumbs {
+  height: calc(400px - 96px);
+}
+.slider__thumbs .slider__image {
+  transition: 0.25s;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
+.slider__thumbs .slider__image:hover {
+  opacity: 1;
+}
+.slider__thumbs .swiper-slide-thumb-active .slider__image {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.slider__images {
+  height: 400px;
+}
+.slider__images .slider__image img {
+  transition: 3s;
+}
+.slider__images .slider__image:hover img {
+  transform: scale(1.1);
+}
+.slider__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.slider__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media (max-width: 767.98px) {
+  .slider__flex {
+    flex-direction: column-reverse;
+  }
+  .slider__col {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    margin-top: 24px;
+    width: 100%;
+  }
+  .slider__images {
+    width: 100%;
+  }
+  .slider__thumbs {
+    height: 100px;
+    width: calc(100% - 96px);
+    margin: 0 16px;
+  }
+  .slider__prev,
+  .slider__next {
+    height: auto;
+    width: 32px;
+  }
+}
+.thumbnail-image img {
+  width: 100%;
+}
+.rating {
+  direction: rtl;
+  display: inline-block;
+  height: 1em;
+  margin: 0;
+  padding: 0;
+  font-size: 30px; /* Adjust font-size to scale component */
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  height: inherit;
+}
+
+.rating label svg {
+  width: auto;
+  height: inherit;
+}
+
+.rating label svg path {
+  fill: rgb(175, 175, 175);
+}
+
+.rating input:checked ~ label svg path {
+  fill: rgb(239, 191, 23);
+}
+
+.rating:hover input:checked ~ label svg path {
+  fill: rgb(155, 143, 101);
+}
+
+.rating:hover label:hover svg path,
+.rating:hover label:hover ~ label svg path {
+  fill: rgb(239, 191, 23);
+}
+
+.rating:hover input:checked ~ label:hover svg path,
+.rating:hover input:checked ~ label:hover ~ label svg path {
+  fill: rgb(239, 191, 23);
+}
+.person{
+      border-radius: 50%;
+    height: 6rem;
+    width: 6rem;
+    display: block;
+}
+.product .row .col-md-6 .row{
+  margin-bottom:5%;
+}
+.product .love{
+  background:transparent;
+  border:none;
+  font-size:20px;
+  font-weight:600;
+  color:#aaa;
+  text-align:center;
+  width:100%;
+}
+.info li{
+  margin-top:4%;
+  color:#aaa;
+
+}
+.comment .card{
+  border:1px solid #000 !important;
+  padding:1%;
+  text-align:right;
+  margin:3% 0;
+}
+.comment .card img{
+  width:70px;
+  height:70px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.comment .card input{
+  width: 95%;
+  margin: auto;
+}
+.prop .fav{
+  margin-right:15%;
+}
+.morelover {
+  margin: 2% 0;
+}
+.morelover div.img_card {
+  height: 200px;
+  background-position: center;
+}
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 1rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before,
+.star-cb-group > input + label:hover ~ label:before,
+.star-cb-group > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: -9999px;
+  width: 0.5em;
+  margin-left: -0.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: 0.5em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before,
+.star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: transparent;
+}
+.morelover .buy{
+    color:#eb9912;
+    border:1px solid #eb9912;
+    padding:5px 20px;
+    font-size:20px;
+    font-weight: 500;
+    transition:all .5s ease-in-out;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-transition:all .5s ;
+    -moz-transition:all .5s ;
+    -ms-transition:all .5s ;
+    -o-transition:all .5s ;
+}
+.morelover .buy:hover{
+    background-color:#eb9912;
+    border:1px solid #eb9912;
+    padding:5px 20px;
+    font-size:20px;
+    font-weight: 500;
+    color:#fff;
+}

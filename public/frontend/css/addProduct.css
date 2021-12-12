@@ -1,0 +1,99 @@
+.section-title .title{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 2%;
+}
+.section-title .paragraph{
+    font-size: 20px;
+    font-weight: 600;
+}
+.adding-image {
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.adding-image button {
+    width: 100%;
+    background: #dd4c39;
+    border: 1px solid #dd4c39;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 0;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.adding-image input {
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    opacity: 0;
+}
+.image_preview .image-parent img{
+    width:300px;
+    height:300px;
+}
+.image , .detailsproduct{
+    background:#fff;
+    padding:3%;
+
+}
+.detailsproduct{
+    margin:2% 0; 
+}
+.add {
+    padding:1% 0;
+    background-color:#ead9c9;
+}
+.collection_img {
+    margin-top:1%;
+    padding:1%;
+}
+.collection_img .image-parent{
+    margin-top:1%;
+}
+.check-photo{
+    display:inherit;
+}
+.check-photo .checkbox{
+    margin-left:10%;
+}
+ .group{
+    margin-bottom:2%;
+}
+ .group input , .detailsproduct .group textarea{
+    padding: 2%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.detailsproduct .group label {
+    margin-bottom:1%;
+    font-size:18px;
+    font-weight:700;
+}
+.detailsproduct button.post{
+    border: 1px solid #dd4c39;
+    background-color:#dd4c39;
+    padding:1% 8%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    color:#fff;
+    font-size:20px;
+    font-weight: 700;
+    display:block;
+    margin-top:3%;
+}

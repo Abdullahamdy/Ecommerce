@@ -1,0 +1,318 @@
+img{
+    max-width:100%;
+    height:auto;
+}
+
+header {
+  background-image: url(../img/head.jpg);
+  background-size: contain;
+  background-position: center;
+}
+
+.morelover {
+    margin: 2% 0;
+  }
+  .morelover div.img_card {
+    height: 200px;
+    background-position: center;
+  }
+
+.overlay {
+  position: relative;
+  z-index: 0;
+}
+
+.overlay::after {
+  position: absolute;
+  content: "";
+  background-color: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0.18;
+}
+.info {
+  height: 100%;
+  display: block;
+  text-align: center;
+  position: relative;
+  z-index: 9999;
+  padding: 15% 0;
+  color: #fff;
+}
+header.overlay button {
+  background-color: #eb9912;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 1% 5%;
+  border: 1px solid #fff;
+  font-weight: 700;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+header.overlay button:hover {
+  background-color: transparent;
+  border: 1px solid #eb9912;
+  color: #eb9912;
+}
+.log .modal-body .group:not(first-child) {
+  margin-top: 5%;
+}
+.log .modal-footer button:first-child {
+  background-color: #dd4c39;
+  color: #fff;
+}
+.morelover {
+  margin: 2% 0;
+}
+.morelover div.img_card {
+  height: 200px;
+  background-position: center;
+}
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 1rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before,
+.star-cb-group > input + label:hover ~ label:before,
+.star-cb-group > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: -9999px;
+  width: 0.5em;
+  margin-left: -0.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: 0.5em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before,
+.star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: transparent;
+}
+.morelover .buy2{
+    border:1px solid #eb9912;
+    border-radius: 10px;
+    padding: 1px;
+}
+.morelover .buy2:hover{
+    background-color: #eb9912;
+
+}
+.morelover  .buy{
+    color:#eb9912;
+    border:1px solid #eb9912;
+    padding:5px 20px;
+    font-size:20px;
+    font-weight: 500;
+    transition:all .5s ease-in-out;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-transition:all .5s ;
+    -moz-transition:all .5s ;
+    -ms-transition:all .5s ;
+    -o-transition:all .5s ;
+}
+.morelover .buy:hover{
+    background-color:#eb9912;
+    border:1px solid #eb9912;
+    padding:5px 20px;
+    font-size:20px;
+    font-weight: 500;
+    color:#fff;
+}
+.about{
+    background-color:#ffeeea;
+    padding:4% 0;
+    font-weight:600;
+}
+.about p{
+    font-size:20px;
+    margin-top:4%;
+}
+.about .row{
+    margin-bottom:5%;
+}
+.about i{
+    font-size:20px;
+}
+.evalution{
+    margin:3% 0;
+}
+.evalution img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.rating {
+	direction: rtl;
+	display: inline-block;
+	height: 1em;
+	margin: 0;
+	padding: 0;
+	font-size: 30px; /* Adjust font-size to scale component */
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.rating input {
+	display: none
+}
+
+.rating label {
+	float: right;
+	height: inherit;
+}
+
+.rating label svg {
+	width: auto;
+	height: inherit;
+}
+
+.rating label svg path {
+	fill: rgb(175, 175, 175);
+}
+
+.rating input:checked ~ label svg path {
+	fill: rgb(239, 191, 23);
+}
+
+.rating:hover input:checked ~ label svg path {
+	fill: rgb(155, 143, 101);
+}
+
+.rating:hover label:hover svg path,
+.rating:hover label:hover ~ label svg path {
+	fill: rgb(239, 191, 23);
+}
+
+.rating:hover input:checked ~ label:hover svg path,
+.rating:hover input:checked ~ label:hover ~ label svg path {
+	fill: rgb(239, 191, 23);
+}
+
+
+.preview {
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20px auto;
+    border: 2px solid rgb(33, 122, 105);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 250px;
+    height: 30px;
+    margin: 5px auto;
+    border-right: 2px dotted rgb(33, 122, 105);
+    border-bottom: 2px dotted rgb(33, 122, 105);
+    border-left: 2px dotted rgb(33, 122, 105);
+}
+
+.file-upload-native,
+.file-upload-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+.file-upload-native:focus,
+.file-upload-text:focus {
+    outline: none;
+}
+
+.file-upload-text {
+    z-index: 10;
+    padding: 5px 15px 8px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    text-overflow: ellipsis;
+    color: rgb(144, 162, 148);
+    border: 0;
+    background-color: transparent;
+}
+
+.file-upload-native {
+    z-index: 15;
+    opacity: 0;
+}
+.text-black{
+    color: #000;
+}
+.text-black:hover{
+    color: #000;
+}

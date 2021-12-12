@@ -1,0 +1,287 @@
+body{
+  overflow-x: hidden
+}
+/* .v_n{
+  height: 40rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.v_n .input-group{
+  margin: 2%;
+}
+.v_n .nav-item {
+  margin: 4% 0
+} */
+
+.buy.active{
+color: red ;
+
+}
+#sidebar {
+  overflow: hidden;
+  z-index: 3;
+}
+#sidebar .list-group {
+  min-width: 100px;
+  background-color: #191919;
+  min-height: 100vh;
+  height:78em;
+}
+#sidebar i {
+  margin-right: 6px;
+}
+
+#sidebar .list-group-item {
+  border-radius: 0;
+  background-color: #191919;
+  color: #EEE;
+  border-left: 0;
+  border-right: 0;
+  border-color: #262626;
+  white-space: nowrap;
+}
+
+/* highlight active menu */
+#sidebar .list-group-item:not(.collapsed) {
+  background-color: #161616;
+}
+
+/* closed state */
+#sidebar .list-group .list-group-item[aria-expanded="false"]::after {
+content: "\f0d7";
+font-family: FontAwesome;
+display: inline;
+text-align: right;
+padding-left: 5px;
+}
+
+/* open state */
+#sidebar .list-group .list-group-item[aria-expanded="true"] {
+background-color: #222;
+}
+#sidebar .list-group .list-group-item[aria-expanded="true"]::after {
+content: "";
+font-family: FontAwesome;
+display: inline;
+text-align: right;
+padding-left: 5px;
+}
+
+/* level 1*/
+#sidebar .list-group .collapse .list-group-item,
+#sidebar .list-group .collapsing .list-group-item  {
+padding-left: 20px;
+}
+
+/* level 2*/
+#sidebar .list-group .collapse > .collapse .list-group-item,
+#sidebar .list-group .collapse > .collapsing .list-group-item {
+padding-left: 30px;
+}
+
+/* level 3*/
+#sidebar .list-group .collapse > .collapse > .collapse .list-group-item {
+padding-left: 40px;
+}
+
+@media (max-width:768px) {
+  #sidebar {
+      min-width: 35px;
+      max-width: 40px;
+      overflow-y: auto;
+      overflow-x: visible;
+      transition: all 0.25s ease;
+      transform: translateX(-45px);
+      position: fixed;
+  }
+  
+  #sidebar.show {
+      transform: translateX(0);
+  }
+
+  #sidebar::-webkit-scrollbar{ width: 0px; }
+  
+  #sidebar, #sidebar .list-group {
+      min-width: 1px;
+      overflow: visible;
+  }
+  /* overlay sub levels on small screens */
+  #sidebar .list-group .collapse.show, #sidebar .list-group .collapsing {
+      position: relative;
+      z-index: 1;
+      width: 190px;
+      top: 0;
+  }
+  #sidebar .list-group > .list-group-item {
+      text-align: center;
+      padding: .75rem .5rem;
+  }
+  /* hide caret icons of top level when collapsed */
+  #sidebar .list-group > .list-group-item[aria-expanded="true"]::after,
+  #sidebar .list-group > .list-group-item[aria-expanded="false"]::after {
+      display:none;
+  }
+}
+
+.collapse.show {
+visibility: visible;
+}
+.collapsing {
+visibility: visible;
+height: 0;
+-webkit-transition-property: height, visibility;
+transition-property: height, visibility;
+-webkit-transition-timing-function: ease-out;
+transition-timing-function: ease-out;
+}
+.collapsing.width {
+-webkit-transition-property: width, visibility;
+transition-property: width, visibility;
+width: 0;
+height: 100%;
+-webkit-transition-timing-function: ease-out;
+transition-timing-function: ease-out;
+}
+
+
+.morelover {
+  margin: 2% 0;
+}
+.morelover div.img_card {
+  height: 200px;
+  background-position: center;
+}
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 1rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before,
+.star-cb-group > input + label:hover ~ label:before,
+.star-cb-group > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: -9999px;
+  width: 0.5em;
+  margin-left: -0.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: 0.5em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before,
+.star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: transparent;
+}
+.morelover .buy2{
+    border:1px solid #eb9912;
+    border-radius: 10px;
+    padding: 1px;
+}
+.morelover .buy2:hover{
+    background-color: #eb9912;
+   
+}
+.morelover  .buy{
+    color:#eb9912;
+    border:1px solid #eb9912;
+    padding:5px 20px;
+    font-size:20px;
+    font-weight: 500;
+    transition:all .5s ease-in-out;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    -ms-border-radius:10px;
+    -o-border-radius:10px;
+    -webkit-transition:all .5s ;
+    -moz-transition:all .5s ;
+    -ms-transition:all .5s ;
+    -o-transition:all .5s ;
+}
+.morelover .buy:hover{
+    background-color:#eb9912;
+    border:1px solid #eb9912;
+    padding:5px 20px;
+    font-size:20px;
+    font-weight: 500;
+    color:#fff;
+} 
+.prop .col-lg-12 a{
+  width:100%;
+  margin-bottom: 4%;
+}
+.list-group *{
+  text-align:right;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
